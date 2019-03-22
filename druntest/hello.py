@@ -17,6 +17,18 @@ class HelloTest(DrunTestCase):
         self.log_info("hello testcase")
         self.assert_equal(True, True)
     
+class AAAATest(DrunTestCase):
+    '''示例测试用例
+    '''
+    owner = "root"
+    timeout = 5
+    priority = DrunTestCase.EnumPriority.High
+    status = DrunTestCase.EnumStatus.Design
+    
+    def run_test(self):
+        self.log_info("hello testcase")
+        self.assert_equal(True, True)
+    
 if __name__ == '__main__':
     HelloTest().debug_run()
 
